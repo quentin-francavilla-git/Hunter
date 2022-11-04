@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{61C06D81-5513-4230-A782-2A3096F2F4CB}</ProjectGuid>
+    <RootNamespace>Starfield</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>MyHunter</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>$(SolutionDir)sfml\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>SFML_STATIC;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ClCompile>
+    <Link>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>$(SolutionDir)sfml\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>flac.lib;freetype.lib;ogg.lib;openal32.lib;opengl32.lib;vorbisfile.lib;vorbisenc.lib;vorbis.lib;sfml-audio-s.lib;sfml-graphics-s.lib;sfml-main.lib;sfml-network-s.lib;sfml-system-s.lib;sfml-window-s.lib;winmm.lib;gdi32.lib;ws2_32.lib;csfml-audio.lib;csfml-graphics.lib;csfml-network.lib;csfml-system.lib;csfml-window.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <SubSystem>Windows</SubSystem>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="index.c" />
+    <ClCompile Include="lib\my\my_convert_char_int.c" />
+    <ClCompile Include="lib\my\my_putchar.c" />
+    <ClCompile Include="lib\my\my_putnbr_base.c" />
+    <ClCompile Include="lib\my\my_putstr.c" />
+    <ClCompile Include="lib\my\my_put_nbr.c" />
+    <ClCompile Include="lib\my\my_revstr.c" />
+    <ClCompile Include="lib\my\my_strlen.c" />
+    <ClCompile Include="lib\my\my_strlennbr.c" />
+    <ClCompile Include="src\create\create_clock.c" />
+    <ClCompile Include="src\create\create_music.c" />
+    <ClCompile Include="src\create\create_sprite.c" />
+    <ClCompile Include="src\create\create_text.c" />
+    <ClCompile Include="src\create\rect.c" />
+    <ClCompile Include="src\create\start_window.c" />
+    <ClCompile Include="src\create\variables.c" />
+    <ClCompile Include="src\create\variables_lvl.c" />
+    <ClCompile Include="src\game_over\game_over.c" />
+    <ClCompile Include="src\game_over\game_over_display.c" />
+    <ClCompile Include="src\game_over\move_rect_dog.c" />
+    <ClCompile Include="src\levels\dragon_ball\dragon_ball.c" />
+    <ClCompile Include="src\levels\dragon_ball\dragon_ball_display.c" />
+    <ClCompile Include="src\levels\dragon_ball\dragon_ball_hitbox.c" />
+    <ClCompile Include="src\levels\dragon_ball\dragon_ball_params.c" />
+    <ClCompile Include="src\levels\dragon_ball\move_rect_goku.c" />
+    <ClCompile Include="src\levels\dragon_ball\shenron.c" />
+    <ClCompile Include="src\levels\duck\duck.c" />
+    <ClCompile Include="src\levels\duck\duck_display.c" />
+    <ClCompile Include="src\levels\duck\duck_hitbox.c" />
+    <ClCompile Include="src\levels\duck\duck_params.c" />
+    <ClCompile Include="src\levels\duck\duck_position.c" />
+    <ClCompile Include="src\levels\duck\move_rect_duck.c" />
+    <ClCompile Include="src\levels\hell\boss_hitbox.c" />
+    <ClCompile Include="src\levels\hell\boss_move.c" />
+    <ClCompile Include="src\levels\hell\hell.c" />
+    <ClCompile Include="src\levels\hell\hell_display.c" />
+    <ClCompile Include="src\levels\hell\hell_params.c" />
+    <ClCompile Include="src\levels\hell\move_rect_boss.c" />
+    <ClCompile Include="src\menu\menu.c" />
+    <ClCompile Include="src\menu\menu_display.c" />
+    <ClCompile Include="src\my_hunter.c" />
+    <ClCompile Include="src\tools\cursor.c" />
+    <ClCompile Include="src\tools\cursor_red.c" />
+    <ClCompile Include="src\tools\destroy.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\lib.h" />
+    <ClInclude Include="include\my_hunter.h" />
+    <ClInclude Include="lib\my\lib.h" />
+    <ClInclude Include="lib\my\my_put_nbr_base.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
